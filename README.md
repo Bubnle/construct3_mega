@@ -21,16 +21,20 @@ https://www.construct.net/
 ### 1) 新建项目
 点击页面的新建项目，开始创建！
 
-![start]()
+  <div align="center">
+    <img src="images/goblin.webp" alt="游戏截图" />
+    </div>
 
 接下来出现设置具体的场景属性设置，我们不对预设尺寸等属性进行更改。
 
-![start]()
+  <div align="center">
+    <img src="images/goblin.webp" alt="游戏截图" />
+    </div>
 
 ### 2) 添加对象
 #### i.添加游戏的背景
 为了契合游戏的背景选择了以像素风的石砖作为背景。
-<div align="center">
+<div>
     <img src="images/ground.webp" alt="游戏截图" />
 </div>
 
@@ -38,8 +42,9 @@ https://www.construct.net/
 
 <div> </div>
 
-接下来就是将这个石砖铺满整个布局，于是点击在布局中对应的图像，在右侧的属性栏中更改坐标和大小
-我们改为（0，0）坐标和 1921x1084 的大小使得铺满整个页面
+接下来就是将这个石砖铺满整个布局，于是点击在布局中对应的图像，在右侧的属性栏中更改坐标和大小,
+
+我们改为（0，0）坐标和 1921x1084 的大小使得背景铺满整个页面！
 
 <div> </div>
 
@@ -48,21 +53,30 @@ https://www.construct.net/
 - 1.法师（玩家）
   <div align="center">
     <img src="images/wizard.webp" alt="游戏截图" />
-</div>
+    </div>
 - 2.哥布林
   <div align="center">
     <img src="images/goblin.webp" alt="游戏截图" />
-</div>
+    </div>
 - 3.火球
   <div align="center">
     <img src="images/spell.webp" alt="游戏截图" />
-</div>
+    </div>
+    
 - 4.闪耀特效
-  <div align="center">
+      <div align="center">
     <img src="images/spark-flash.webp" alt="游戏截图" />
-</div>
-添加方法和上面类似双击布局，选择常规中的精灵模块进行添加，注意不同的对象应该有不同的名字。
+    </div>
+- 5.鼠标
+  
+添加方法和上面类似双击布局，选择常规中的精灵模块进行添加，<mark>注意不同的对象应该有不同的名字。</mark>
+   
 <div></div>
+
+#### iii.创建更多的哥布林对象
+为了保证游戏的合理性,以及具有一定的挑战性，在游戏的开始添加了8个哥布林对我们操控的法师进行冲撞攻击！
+将哥布林对象拖拽值布局当中均匀分布在我们玩家周围！
+其中的哥布林其实就是相当于“类”的概念，拖拽生成的就是哥布林的实体对象！
 
 ### 3)添加行为
 需要对添加的对象进行行为的添加~
@@ -78,11 +92,76 @@ https://www.construct.net/
 选择上面提到的行为对不同的对象进行添加！
 <div></div>
 
-### 4)创建更多的哥布林对象
-为了保证游戏的合理性,以及具有一定的挑战性
+### 4)实体变量添加
+为了符合正常现象，我决定对哥布林进行实体变量health的添加。
 
+使得被攻击一定次数后哥布林会死亡。
+
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+
+### 5)添加事件
+#### i.玩家始终指向鼠标
+点击事件表1,开始添加事件。
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+之后选择系统对象作为事件的条件的对象，每一帧法师（玩家）都会指向鼠标作为事件的动作！
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+朝向方向就是鼠标的坐标（m.X,m.Y）
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+最终我们得到了我们创建的第一个事件
+
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+
+#### ii.玩家释放火球术
+当玩家点击时，他们应该施放一个火球术。
+
+可以通过点击鼠标左键进行释放，并沿着鼠标方向进行移动。
+因此得到了以下事件：（具体细节操作同i，以下省略）
+
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+    
+#### iii.场景内生成哥布林
+为了能进行持续的游玩，我们决定每1.5s在场景内随机位置生成哥布林。
+
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+与此同时哥布林会持续向玩家方向进行冲锋！
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+
+#### iv.碰撞事件
+当法师释放的强大火球术与哥布林发生碰撞，哥布林会受到一定伤害，并且进入暴怒状态速度会逐渐增加。
+于此同时火球术在未击杀哥布林是会被销毁。
+<div align="center">
+    <img src="images/spark-flash.webp" alt="游戏截图" />
+    </div>
+    
 ## 4.游戏可拓展的思路
 <a name="游戏可拓展的思路"></a>
 
 ## 5.游戏demo展示链接
 <a name="游戏demo展示链接"></a>
+
+
