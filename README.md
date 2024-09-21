@@ -251,7 +251,12 @@ https://www.construct.net/
  <div align="center">
     <img src="readme_images/new_4.jpg" alt="教程" />
     </div>
-  
+
+结束画面:<br></br>
+ <div align="center">
+    <img src="readme_images/new_5.jpg" alt="教程" />
+    </div>
+
 ## 4.游戏可拓展的思路
 <a name="游戏可拓展的思路"></a>
 
