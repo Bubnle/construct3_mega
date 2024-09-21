@@ -23,26 +23,26 @@ https://www.construct.net/
 
   <div align="center">
     <img src="readme_images/1.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 接下来出现设置具体的场景属性设置，我们不对预设尺寸等属性进行更改。
 
  <div align="center">
     <img src="readme_images/2.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 ### 2) 添加对象
 #### i.添加游戏的背景
 为了契合游戏的背景选择了以像素风的石砖作为背景。
 <div>
     <img src="images/ground.webp" alt="游戏截图" />
-</div>
+</div><br></br>
 
 具体操作就是双击布局来创建，选择常规中的平铺图
 
  <div align="center">
     <img src="readme_images/3.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 接下来就是将这个石砖铺满整个布局，于是点击在布局中对应的图像，在右侧的属性栏中更改坐标和大小,
 
@@ -50,12 +50,12 @@ https://www.construct.net/
 
  <div align="center">
     <img src="readme_images/4.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 得到了如下图的效果：
  <div align="center">
     <img src="readme_images/5.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 #### ii.添加其他对象
 
@@ -70,7 +70,7 @@ https://www.construct.net/
 - 3.火球
   <div align="center">
     <img src="images/spell.webp" alt="游戏截图" />
-    </div>
+    </div><br></br>
     
 - 4.闪耀特效
       <div align="center">
@@ -93,7 +93,7 @@ https://www.construct.net/
 
  <div align="center">
     <img src="readme_images/9.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 ### 3)添加行为
 需要对添加的对象进行行为的添加~
@@ -109,14 +109,14 @@ https://www.construct.net/
 
  <div align="center">
     <img src="readme_images/21.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
     
 选择上面提到的行为对不同的对象进行添加！
 
  <div align="center">
     <img src="readme_images/8.jpg" alt="教程" />
-    </div>
+    </div><br></br>
     
 
 
@@ -158,7 +158,7 @@ https://www.construct.net/
 
  <div align="center">
     <img src="readme_images/10.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 #### ii.玩家释放火球术
 当玩家点击时，他们应该施放一个火球术。
@@ -168,36 +168,36 @@ https://www.construct.net/
 
  <div align="center">
     <img src="readme_images/16.jpg" alt="教程" />
-    </div>
+    </div><br></br>
     
 #### iii.场景内生成哥布林
 为了能进行持续的游玩，我们决定每1.5s在场景内随机位置生成哥布林。
 
-<div>       </div>
+<br></br>
 
  <div align="center">
     <img src="readme_images/17.jpg" alt="教程" />
-    </div>
-与此同时哥布林会持续向玩家方向进行冲锋！
-<div>      </div>
+    </div> <br></br>
+与此同时哥布林会持续向玩家方向进行冲锋！<br></br>
+
 
  <div align="center">
     <img src="readme_images/20.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 #### iv.火球术击中哥布林
 当法师释放的强大火球术与哥布林发生碰撞，哥布林会受到一定伤害，并且进入暴怒状态速度会逐渐增加。
 于此同时火球术在未击杀哥布林是会被销毁。
  <div align="center">
     <img src="readme_images/19.jpg" alt="教程" />
-    </div>
-<div>       </div>
+    </div><br></br>
+
 
 当哥布林在被击中后血量少于0的时候会自动销毁并释放闪耀的死亡特效！
 
  <div align="center">
     <img src="readme_images/new_3.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 <mark>以下是拓展增强分内容</mark>
 
@@ -208,13 +208,14 @@ https://www.construct.net/
 
  <div align="center">
     <img src="readme_images/new_2.jpg" alt="教程" />
-    </div>
+    </div> <br></br>
 
 这需要设置一个全局变量Score来记录得分并显示在左上角
 
+
  <div align="center">
     <img src="readme_images/new_1.jpg" alt="教程" />
-    </div>
+    </div><br></br>
 
 #### vi.哥布林攻击命中玩家
 当哥布林的猛烈攻击击中玩家是就会游戏结束，得分清零，一代法王就此陨落（角色销毁）。
