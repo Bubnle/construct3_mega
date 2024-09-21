@@ -266,4 +266,5 @@ https://bubnle.github.io/construct3_mega/<br></br>
 
 ## 6.游戏demo展示链接
 <a name="游戏demo展示链接"></a>
+https://www.bilibili.com/video/BV1H2tkeSEyG
 
