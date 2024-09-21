@@ -22,13 +22,13 @@ https://www.construct.net/
 点击页面的新建项目，开始创建！
 
   <div align="center">
-    <img src="images/goblin.webp" alt="游戏截图" />
+    <img src="readme_images/1.jpg" alt="教程" />
     </div>
 
 接下来出现设置具体的场景属性设置，我们不对预设尺寸等属性进行更改。
 
-  <div align="center">
-    <img src="images/goblin.webp" alt="游戏截图" />
+ <div align="center">
+    <img src="readme_images/2.jpg" alt="教程" />
     </div>
 
 ### 2) 添加对象
@@ -40,13 +40,22 @@ https://www.construct.net/
 
 具体操作就是双击布局来创建，选择常规中的平铺图
 
-<div> </div>
+ <div align="center">
+    <img src="readme_images/3.jpg" alt="教程" />
+    </div>
 
 接下来就是将这个石砖铺满整个布局，于是点击在布局中对应的图像，在右侧的属性栏中更改坐标和大小,
 
 我们改为（0，0）坐标和 1921x1084 的大小使得背景铺满整个页面！
 
-<div> </div>
+ <div align="center">
+    <img src="readme_images/4.jpg" alt="教程" />
+    </div>
+
+得到了如下图的效果：
+ <div align="center">
+    <img src="readme_images/5.jpg" alt="教程" />
+    </div>
 
 #### ii.添加其他对象
 
@@ -71,12 +80,20 @@ https://www.construct.net/
   
 添加方法和上面类似双击布局，选择常规中的精灵模块进行添加，<mark>注意不同的对象应该有不同的名字。</mark>
    
-<div></div>
+ <div align="center">
+    <img src="readme_images/6.jpg" alt="教程" />
+    </div>
+
+<mark>注意要将火球和闪耀特效放置在场景外面！</mark>
 
 #### iii.创建更多的哥布林对象
 为了保证游戏的合理性,以及具有一定的挑战性，在游戏的开始添加了8个哥布林对我们操控的法师进行冲撞攻击！
 将哥布林对象拖拽值布局当中均匀分布在我们玩家周围！
 其中的哥布林其实就是相当于“类”的概念，拖拽生成的就是哥布林的实体对象！
+
+ <div align="center">
+    <img src="readme_images/9.jpg" alt="教程" />
+    </div>
 
 ### 3)添加行为
 需要对添加的对象进行行为的添加~
@@ -88,46 +105,59 @@ https://www.construct.net/
 淡入淡出：使对象淡出，我们将在火花闪烁时使用
 
 如何添加行为？
-<div></div>
+找到右侧栏里面的行为的模块
+
+ <div align="center">
+    <img src="readme_images/21.jpg" alt="教程" />
+    </div>
+
+    
 选择上面提到的行为对不同的对象进行添加！
-<div></div>
+
+ <div align="center">
+    <img src="readme_images/8.jpg" alt="教程" />
+    </div>
+    
+
 
 ### 4)实体变量添加
 为了符合正常现象，我决定对哥布林进行实体变量health的添加。
 
 使得被攻击一定次数后哥布林会死亡。
 
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+ <div align="center">
+    <img src="readme_images/18.jpg" alt="教程" />
     </div>
 
 ### 5)添加事件
 #### i.玩家始终指向鼠标
 点击事件表1,开始添加事件。
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+
+ <div align="center">
+    <img src="readme_images/11.jpg" alt="教程" />
     </div>
+    
 之后选择系统对象作为事件的条件的对象，每一帧法师（玩家）都会指向鼠标作为事件的动作！
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+
+ <div align="center">
+    <img src="readme_images/12.jpg" alt="教程" />
     </div>
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+ <div align="center">
+    <img src="readme_images/13.jpg" alt="教程" />
     </div>
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+ <div align="center">
+    <img src="readme_images/14.jpg" alt="教程" />
     </div>
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+ <div align="center">
+    <img src="readme_images/15.jpg" alt="教程" />
     </div>
 朝向方向就是鼠标的坐标（m.X,m.Y）
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
-    </div>
+  
 最终我们得到了我们创建的第一个事件
 
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+
+ <div align="center">
+    <img src="readme_images/10.jpg" alt="教程" />
     </div>
 
 #### ii.玩家释放火球术
@@ -136,28 +166,63 @@ https://www.construct.net/
 可以通过点击鼠标左键进行释放，并沿着鼠标方向进行移动。
 因此得到了以下事件：（具体细节操作同i，以下省略）
 
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+ <div align="center">
+    <img src="readme_images/16.jpg" alt="教程" />
     </div>
     
 #### iii.场景内生成哥布林
 为了能进行持续的游玩，我们决定每1.5s在场景内随机位置生成哥布林。
 
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+<div>       </div>
+
+ <div align="center">
+    <img src="readme_images/17.jpg" alt="教程" />
     </div>
 与此同时哥布林会持续向玩家方向进行冲锋！
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+<div>      </div>
+
+ <div align="center">
+    <img src="readme_images/20.jpg" alt="教程" />
     </div>
 
-#### iv.碰撞事件
+#### iv.火球术击中哥布林
 当法师释放的强大火球术与哥布林发生碰撞，哥布林会受到一定伤害，并且进入暴怒状态速度会逐渐增加。
 于此同时火球术在未击杀哥布林是会被销毁。
-<div align="center">
-    <img src="images/spark-flash.webp" alt="游戏截图" />
+ <div align="center">
+    <img src="readme_images/19.jpg" alt="教程" />
     </div>
-    
+<div>       </div>
+
+当哥布林在被击中后血量少于0的时候会自动销毁并释放闪耀的死亡特效！
+
+ <div align="center">
+    <img src="readme_images/new_3.jpg" alt="教程" />
+    </div>
+
+<mark>以下是拓展增强分内容</mark>
+
+#### v.得分事件
+为了增加游戏的娱乐性以及挑战性，进一步满足玩家的需求，决定添加了得分事件！
+
+即每次击杀一只哥布林都会在界面的左上角的Score增加一分。
+
+ <div align="center">
+    <img src="readme_images/new_2.jpg" alt="教程" />
+    </div>
+
+这需要设置一个全局变量Score来记录得分并显示在左上角
+
+ <div align="center">
+    <img src="readme_images/new_1.jpg" alt="教程" />
+    </div>
+
+#### vi.哥布林攻击命中玩家
+当哥布林的猛烈攻击击中玩家是就会游戏结束，得分清零，一代法王就此陨落（角色销毁）。
+最终跳出游戏结束的画面，并在3s后重载场景！
+ <div align="center">
+    <img src="readme_images/new_4.jpg" alt="教程" />
+    </div>
+  
 ## 4.游戏可拓展的思路
 <a name="游戏可拓展的思路"></a>
 
